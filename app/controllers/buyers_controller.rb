@@ -1,6 +1,7 @@
 class BuyersController < ApplicationController
   def index
     @buyers = Buyer.all
+
   end
 
   def show
@@ -26,7 +27,7 @@ class BuyersController < ApplicationController
     @buyer.buyer_marital_status = params[:buyer_marital_status]
 
     if @buyer.save
-      redirect_to "/buyers", :notice => "Buyer created successfully."
+      redirect_to "/essays/new", :notice => "Buyer created successfully."
     else
       render 'new'
     end

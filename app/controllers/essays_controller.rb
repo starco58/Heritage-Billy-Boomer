@@ -30,7 +30,7 @@ class EssaysController < ApplicationController
     @essay.seller_id = params[:seller_id]
 
     if @essay.save
-      redirect_to "/essays", :notice => "Essay created successfully."
+      redirect_to "/answers/new", :notice => "Essay created successfully."
     else
       render 'new'
     end

@@ -8,16 +8,16 @@
   <thead>
     <tr>
       <th>Image url</th>
-      <th>Buyer</th>
-      <th>Buyer username</th>
-      <th>Buyer first name</th>
-      <th>Buyer last name</th>
-      <th>Buyer email</th>
-      <th>Buyer net worth</th>
-      <th>Buyer birthdate</th>
-      <th>Buyer level of education</th>
-      <th>Buyer preferred industry</th>
-      <th>Buyer marital status</th>
+      <th></th>
+      <th> Username</th>
+      <th> First Name</th>
+      <th> Last Name</th>
+      <th> Email</th>
+      <th> Net Worth</th>
+      <th> Birthdate</th>
+      <th> Level of Education</th>
+      <th> Preferred Industry</th>
+      <th> Marital Status</th>
       <th></th>
       <th></th>
       <th></th>
@@ -27,7 +27,8 @@
   <tbody>
     <% @buyers.each do |buyer| %>
       <tr>
-        <td><%= buyer.image_url %></td>
+        <td><img src="<%= buyer.image_url %>" width ="60"></td>
+        <!-- <td><%= buyer.image_url %></td> -->
         <td><%= buyer.buyer_id %></td>
         <td><%= buyer.buyer_username %></td>
         <td><%= buyer.buyer_first_name %></td>
