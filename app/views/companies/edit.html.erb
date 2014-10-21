@@ -1,0 +1,130 @@
+<div class="page-header">
+  <h1>Edit Company #<%= @company.id %></h1>
+</div>
+
+<% if @company.errors.any? %>
+  <% @company.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<form action="/update_company/<%= @company.id %>" class="form-horizontal">
+  <!-- Label and input for company_id -->
+  <div class="form-group">
+    <label for="company_id" class="col-sm-2 control-label">
+      Company
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_id" name="company_id" placeholder="Company" class="form-control" value="<%= @company.company_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_name -->
+  <div class="form-group">
+    <label for="company_name" class="col-sm-2 control-label">
+      Company name
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_name" name="company_name" placeholder="Company name" class="form-control" value="<%= @company.company_name %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_industry -->
+  <div class="form-group">
+    <label for="company_industry" class="col-sm-2 control-label">
+      Company industry
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_industry" name="company_industry" placeholder="Company industry" class="form-control" value="<%= @company.company_industry %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_number_of_employees -->
+  <div class="form-group">
+    <label for="company_number_of_employees" class="col-sm-2 control-label">
+      Company number of employees
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_number_of_employees" name="company_number_of_employees" placeholder="Company number of employees" class="form-control" value="<%= @company.company_number_of_employees %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_taxid -->
+  <div class="form-group">
+    <label for="company_taxid" class="col-sm-2 control-label">
+      Company taxid
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_taxid" name="company_taxid" placeholder="Company taxid" class="form-control" value="<%= @company.company_taxid %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_revenue_current_year -->
+  <div class="form-group">
+    <label for="company_revenue_current_year" class="col-sm-2 control-label">
+      Company revenue current year
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_revenue_current_year" name="company_revenue_current_year" placeholder="Company revenue current year" class="form-control" value="<%= @company.company_revenue_current_year %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_revenue_last_year -->
+  <div class="form-group">
+    <label for="company_revenue_last_year" class="col-sm-2 control-label">
+      Company revenue last year
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_revenue_last_year" name="company_revenue_last_year" placeholder="Company revenue last year" class="form-control" value="<%= @company.company_revenue_last_year %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_revenue_2_year -->
+  <div class="form-group">
+    <label for="company_revenue_2_year" class="col-sm-2 control-label">
+      Company revenue 2 year
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_revenue_2_year" name="company_revenue_2_year" placeholder="Company revenue 2 year" class="form-control" value="<%= @company.company_revenue_2_year %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_EBITDA -->
+  <div class="form-group">
+    <label for="company_EBITDA" class="col-sm-2 control-label">
+      Company ebitda
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_EBITDA" name="company_EBITDA" placeholder="Company ebitda" class="form-control" value="<%= @company.company_EBITDA %>">
+    </div>
+  </div>
+
+  <!-- Label and input for company_years_in_business -->
+  <div class="form-group">
+    <label for="company_years_in_business" class="col-sm-2 control-label">
+      Company years in business
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="company_years_in_business" name="company_years_in_business" placeholder="Company years in business" class="form-control" value="<%= @company.company_years_in_business %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_id -->
+  <div class="form-group">
+    <label for="seller_id" class="col-sm-2 control-label">
+      Seller
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_id" name="seller_id" placeholder="Seller" class="form-control" value="<%= @company.seller_id %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Update Company" class="btn btn-primary">
+    </div>
+  </div>
+</form>

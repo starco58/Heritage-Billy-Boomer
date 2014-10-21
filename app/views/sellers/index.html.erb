@@ -1,0 +1,60 @@
+<div class="page-header">
+  <h1>Sellers</h1>
+</div>
+
+<p><a href="/sellers/new" class="btn btn-primary">Add a New Seller</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Seller</th>
+      <th>Image url</th>
+      <th>Seller username</th>
+      <th>Seller first name</th>
+      <th>Seller last name</th>
+      <th>Seller email</th>
+      <th>Seller birthdate</th>
+      <th>Seller level of education</th>
+      <th>Seller industry</th>
+      <th>Seller marital status</th>
+      <th>Seller children</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sellers.each do |seller| %>
+      <tr>
+        <td><%= seller.seller_id %></td>
+        <td><%= seller.image_url %></td>
+        <td><%= seller.seller_username %></td>
+        <td><%= seller.seller_first_name %></td>
+        <td><%= seller.seller_last_name %></td>
+        <td><%= seller.seller_email %></td>
+        <td><%= seller.seller_birthdate %></td>
+        <td><%= seller.seller_level_of_education %></td>
+        <td><%= seller.seller_industry %></td>
+        <td><%= seller.seller_marital_status %></td>
+        <td><%= seller.seller_children %></td>
+        <td>
+          <a href="/sellers/<%= seller.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/sellers/<%= seller.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_seller/<%= seller.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

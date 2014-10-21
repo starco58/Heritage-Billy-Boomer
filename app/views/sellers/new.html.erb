@@ -1,0 +1,132 @@
+<div class="page-header">
+  <h1>Welcome Owners!</h1>
+  <h3>Complete the below form to start the process</h3>
+</div>
+
+<% if @seller.errors.any? %>
+  <% @seller.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<form action="/create_seller" class="form-horizontal">
+  <!-- Label and input for seller_id -->
+  <div class="form-group">
+    <label for="seller_id" class="col-sm-2 control-label">
+      Seller ID
+    </label>
+    <div class="col-sm-10">
+      <input type="hidden" id="seller_id" name="seller_id" placeholder="Seller" class="form-control" value="<%= @seller.seller_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for image_url -->
+ <!--  <div class="form-group">
+    <label for="image_url" class="col-sm-2 control-label">
+      Image url
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control" value="<%= @seller.image_url %>">
+    </div>
+  </div> -->
+
+  <!-- Label and input for seller_username -->
+  <div class="form-group">
+    <label for="seller_username" class="col-sm-2 control-label">
+      Create a username
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_username" name="seller_username" placeholder="Seller username" class="form-control" value="<%= @seller.seller_username %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_first_name -->
+  <div class="form-group">
+    <label for="seller_first_name" class="col-sm-2 control-label">
+      First name
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_first_name" name="seller_first_name" placeholder="Seller first name" class="form-control" value="<%= @seller.seller_first_name %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_last_name -->
+  <div class="form-group">
+    <label for="seller_last_name" class="col-sm-2 control-label">
+     Last name
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_last_name" name="seller_last_name" placeholder="Seller last name" class="form-control" value="<%= @seller.seller_last_name %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_email -->
+  <div class="form-group">
+    <label for="seller_email" class="col-sm-2 control-label">
+      Email
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_email" name="seller_email" placeholder="Seller email" class="form-control" value="<%= @seller.seller_email %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_birthdate -->
+  <div class="form-group">
+    <label for="seller_birthdate" class="col-sm-2 control-label">
+      Birthdate
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_birthdate" name="seller_birthdate" placeholder="Seller birthdate" class="form-control" value="<%= @seller.seller_birthdate %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_level_of_education -->
+  <div class="form-group">
+    <label for="seller_level_of_education" class="col-sm-2 control-label">
+      Level of education
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_level_of_education" name="seller_level_of_education" placeholder="Seller level of education" class="form-control" value="<%= @seller.seller_level_of_education %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_industry -->
+  <div class="form-group">
+    <label for="seller_industry" class="col-sm-2 control-label">
+      Current industry
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_industry" name="seller_industry" placeholder="Seller industry" class="form-control" value="<%= @seller.seller_industry %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_marital_status -->
+  <div class="form-group">
+    <label for="seller_marital_status" class="col-sm-2 control-label">
+      Marital status
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_marital_status" name="seller_marital_status" placeholder="Seller marital status" class="form-control" value="<%= @seller.seller_marital_status %>">
+    </div>
+  </div>
+
+  <!-- Label and input for seller_children -->
+  <div class="form-group">
+    <label for="seller_children" class="col-sm-2 control-label">
+      Number of children
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="seller_children" name="seller_children" placeholder="Seller children" class="form-control" value="<%= @seller.seller_children %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create" class="btn btn-primary">
+    </div>
+  </div>
+</form>
