@@ -38,19 +38,19 @@ root 'essays#home'
 
   # Routes for the Essay resource:
   # CREATE
-  # get('/essays/new', { :controller => 'essays', :action => 'new' })
-  # get('/create_essay', { :controller => 'essays', :action => 'create' })
+  get('/essays/new', { :controller => 'essays', :action => 'new' })
+  get('/create_essay', { :controller => 'essays', :action => 'create' })
 
   # READ
-  # get('/essays', { :controller => 'essays', :action => 'index' })
-  # get('/essays/:id', { :controller => 'essays', :action => 'show' })
-  # get('/home', { :controller => 'essays', :action => 'home' })
+  get('/essays', { :controller => 'essays', :action => 'index' })
+  get('/essays/:id', { :controller => 'essays', :action => 'show' })
+  get('/home', { :controller => 'essays', :action => 'home' })
   # UPDATE
-  # get('/essays/:id/edit', { :controller => 'essays', :action => 'edit' })
-  # get('/update_essay/:id', { :controller => 'essays', :action => 'update' })
+  get('/essays/:id/edit', { :controller => 'essays', :action => 'edit' })
+  get('/update_essay/:id', { :controller => 'essays', :action => 'update' })
 
   # DELETE
-  # get('/delete_essay/:id', { :controller => 'essays', :action => 'destroy' })
+  get('/delete_essay/:id', { :controller => 'essays', :action => 'destroy' })
   #------------------------------
 
   # Routes for the Company resource:
@@ -103,8 +103,8 @@ root 'essays#home'
   # DELETE
   get('/delete_buyer/:id', { :controller => 'buyers', :action => 'destroy' })
 
-#About
-get('/about', { :controller => 'essays', :action => 'about' })
+  #About
+  get('/about', { :controller => 'essays', :action => 'about' })
   #------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.
