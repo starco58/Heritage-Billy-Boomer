@@ -4,53 +4,53 @@ root 'essays#home'
 
   # Routes for the Answer resource:
   # CREATE
-  get('/answers/new', { :controller => 'answers', :action => 'new' })
-  get('/create_answer', { :controller => 'answers', :action => 'create' })
+  # get('/answers/new', { :controller => 'answers', :action => 'new' })
+  # get('/create_answer', { :controller => 'answers', :action => 'create' })
 
   # READ
-  get('/answers', { :controller => 'answers', :action => 'index' })
-  get('/answers/:id', { :controller => 'answers', :action => 'show' })
+  # get('/answers', { :controller => 'answers', :action => 'index' })
+  # get('/answers/:id', { :controller => 'answers', :action => 'show' })
 
   # UPDATE
-  get('/answers/:id/edit', { :controller => 'answers', :action => 'edit' })
-  get('/update_answer/:id', { :controller => 'answers', :action => 'update' })
+  # get('/answers/:id/edit', { :controller => 'answers', :action => 'edit' })
+  # get('/update_answer/:id', { :controller => 'answers', :action => 'update' })
 
   # DELETE
-  get('/delete_answer/:id', { :controller => 'answers', :action => 'destroy' })
+  # get('/delete_answer/:id', { :controller => 'answers', :action => 'destroy' })
   #------------------------------
 
   # Routes for the Questionnaire resource:
   # CREATE
-  get('/questionnaires/new', { :controller => 'questionnaires', :action => 'new' })
-  get('/create_questionnaire', { :controller => 'questionnaires', :action => 'create' })
+  # get('/questionnaires/new', { :controller => 'questionnaires', :action => 'new' })
+  # get('/create_questionnaire', { :controller => 'questionnaires', :action => 'create' })
 
   # READ
-  get('/questionnaires', { :controller => 'questionnaires', :action => 'index' })
-  get('/questionnaires/:id', { :controller => 'questionnaires', :action => 'show' })
+  # get('/questionnaires', { :controller => 'questionnaires', :action => 'index' })
+  # get('/questionnaires/:id', { :controller => 'questionnaires', :action => 'show' })
 
   # UPDATE
-  get('/questionnaires/:id/edit', { :controller => 'questionnaires', :action => 'edit' })
-  get('/update_questionnaire/:id', { :controller => 'questionnaires', :action => 'update' })
+  # get('/questionnaires/:id/edit', { :controller => 'questionnaires', :action => 'edit' })
+  # get('/update_questionnaire/:id', { :controller => 'questionnaires', :action => 'update' })
 
   # DELETE
-  get('/delete_questionnaire/:id', { :controller => 'questionnaires', :action => 'destroy' })
+  # get('/delete_questionnaire/:id', { :controller => 'questionnaires', :action => 'destroy' })
   #------------------------------
 
   # Routes for the Essay resource:
   # CREATE
-  get('/essays/new', { :controller => 'essays', :action => 'new' })
-  get('/create_essay', { :controller => 'essays', :action => 'create' })
+  # get('/essays/new', { :controller => 'essays', :action => 'new' })
+  # get('/create_essay', { :controller => 'essays', :action => 'create' })
 
   # READ
-  get('/essays', { :controller => 'essays', :action => 'index' })
-  get('/essays/:id', { :controller => 'essays', :action => 'show' })
-  get('/home', { :controller => 'essays', :action => 'home' })
+  # get('/essays', { :controller => 'essays', :action => 'index' })
+  # get('/essays/:id', { :controller => 'essays', :action => 'show' })
+  # get('/home', { :controller => 'essays', :action => 'home' })
   # UPDATE
-  get('/essays/:id/edit', { :controller => 'essays', :action => 'edit' })
-  get('/update_essay/:id', { :controller => 'essays', :action => 'update' })
+  # get('/essays/:id/edit', { :controller => 'essays', :action => 'edit' })
+  # get('/update_essay/:id', { :controller => 'essays', :action => 'update' })
 
   # DELETE
-  get('/delete_essay/:id', { :controller => 'essays', :action => 'destroy' })
+  # get('/delete_essay/:id', { :controller => 'essays', :action => 'destroy' })
   #------------------------------
 
   # Routes for the Company resource:
